@@ -1,0 +1,237 @@
+body {
+    background-color: #fbede1;
+    font-family: helvetica
+}
+
+header {
+    margin-left: 6%;
+    margin-top: 3%;
+}
+
+hr {
+    width: 70%;
+    color: black;
+    opacity: 1;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    text-align: center;
+    margin-top: 10%;
+}
+
+li {
+    display: inline;
+    margin: 10px;
+}
+
+ul {
+    text-align: center;
+    margin-top: 2%;
+}
+
+button {
+    background-color: #633031;
+    color: #fbede1;
+    border: none;
+    border-radius: 25px;
+}
+
+.logo {
+    width: 120px;
+}
+
+.bookbutton {
+    float: right;
+    width: 200px;
+    height: 50px;
+}
+
+.tel {
+    margin-top: 1%;
+    margin-right: 5%;
+    float: right;
+    color: #633031;
+    font-size: 20px;
+}
+
+.row {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.pic {
+    width: 400px;
+    text-align: center;
+
+
+}
+
+.twopic {
+    margin-top: -5%;
+}
+
+@media only screen and (max-width:992px) {
+    .pic {
+        margin-top: 2%;
+    }
+
+}
+
+@media only screen and (max-width:580px) {
+    li {
+        display: block;
+        margin: 10px;
+    }
+
+}
+
+*,
+*:after,
+*:before {
+    border-box;
+    box-sizing: border-box;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: '';
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.hover-text-one {
+    overflow: hidden;
+    margin: 0;
+    width: 100%;
+    list-style: none;
+
+}
+
+.hover-text-one figure {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    overflow: hidden;
+    background: none;
+    cursor: pointer;
+}
+
+.hover-text-one figure img {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    opacity: 0.8;
+}
+
+.hover-text-one figure figcaption {
+    padding: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.hover-text-one figure figcaption::before,
+.hover-text-one figure figcaption::after {
+    pointer-events: none;
+}
+
+.hover-text-one figure figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hover-text-one figure h3 {
+    word-spacing: -0.15em;
+    font-weight: 300;
+}
+
+.hover-text-one figure h3 span {
+    font-weight: 800;
+}
+
+.hover-text-one figure h3,
+.hover-text-one figure p {
+    margin: 0;
+}
+
+.hover-text-one figure p {
+    letter-spacing: 1px;
+    font-size: 68.5%;
+}
+
+/* Эффект при наведении */
+figure.effect-text-two figcaption::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 71%;
+    height: 100%;
+    background: -webkit-linear-gradient(top, #633031(72, 76, 97, 0) 0%, #633031(72, 76, 97, 0.8) 75%);
+    background: linear-gradient(to bottom, rgba(72, 76, 97, 0) 0%, rgba(72, 76, 97, 0.8) 75%);
+    content: '';
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50%, 0);
+    transform: translate3d(0, 50%, 0);
+}
+
+figure.effect-text-two h3 {
+    font-size: 20px;
+    position: absolute;
+    text-align: right;
+    top: 50%;
+    left: 0;
+    width: 70%;
+    color: white;
+    -webkit-transition: -webkit-transform 0.35s, color 0.35s;
+    transition: transform 0.35s, color 0.35s;
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+}
+
+figure.effect-text-two figcaption::before,
+figure.effect-text-two p {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-text-two p {
+    position: absolute;
+    font-size: 10px;
+    text-align: left;
+    bottom: 0;
+    left: 0;
+    padding: 2em;
+    width: 100%;
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+}
+
+figure.effect-text-two:hover h3 {
+    font-size: 20px;
+    text-align: left;
+    color: #fff;
+    -webkit-transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0);
+    transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0);
+}
+
+figure.effect-text-two:hover figcaption::before,
+figure.effect-text-two:hover p {
+    text-align: left;
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
