@@ -1,0 +1,77 @@
+.container {
+    display: flex;
+    width: 100%;
+    padding: 4% 2%;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+.box {
+    flex: 1;
+    overflow: hidden;
+    transition: .5s;
+    margin: 0 1%;
+    line-height: 0;
+}
+
+.box>img {
+    width: 200%;
+    height: calc(100% - 10vh);
+    object-fit: cover;
+    transition: .5s;
+}
+
+.box>span {
+    font-size: 3.8vh;
+    display: block;
+    text-align: center;
+    height: 10vh;
+    line-height: 2.6;
+}
+
+.box:hover {
+    flex: 1 1 50%;
+}
+
+.box:hover>img {
+    width: 100%;
+    height: 100%;
+}
+
+.container-fluid {
+    max-width: 85%;
+}
+
+.text {
+    text-align: center;
+}
+
+.welcome {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: #633031;
+}
+
+
+.info {
+    text-align: left;
+    margin-left: 5%; 
+    margin-top: 2%;
+}
+@media only screen and (max-width:768px) {
+    .info {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
