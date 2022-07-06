@@ -1,0 +1,25 @@
+.contact {
+    text-align: left;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.row {
+    margin-top: 10%;
+}
+
+h4 {
+    text-align: left;
+    font-size: 20px;
+    line-height: 1.5;
+}
+.pcontact {text-align: left;}
+
+.hrcontact {
+    width: 100%;
+}
+.googlemap{float: right;
+    max-width: 100%;
+border-radius: 2%;
+margin-bottom: 5%;
+margin-right: 2%;}
