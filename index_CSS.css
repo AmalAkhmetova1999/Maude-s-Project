@@ -57,6 +57,15 @@ button {
     font-size: 20px;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: #633031;
+}
+
 .row {
     text-align: center;
     margin-left: auto;
@@ -67,8 +76,6 @@ button {
 .picture {
     width: 400px;
     text-align: center;
-
-
 }
 
 .twopic {
@@ -87,12 +94,14 @@ button {
         display: block;
         margin: 10px;
     }
+
     .bookbutton {
-        float:none;
+        float: none;
         text-align: center;
         width: 200px;
         height: 50px;
     }
+
     .tel {
         float: none;
         text-align: center;
