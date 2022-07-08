@@ -44,17 +44,11 @@ button {
 }
 
 .bookbutton {
-    float: right;
+    position: fixed;
+    right: 2%;
     width: 200px;
     height: 50px;
-}
-
-.tel {
-    margin-top: 1%;
-    margin-right: 5%;
-    float: right;
-    color: #633031;
-    font-size: 20px;
+    z-index: 2;
 }
 
 a {
@@ -94,20 +88,6 @@ a:hover {
         display: block;
         margin: 10px;
     }
-
-    .bookbutton {
-        float: none;
-        text-align: center;
-        width: 200px;
-        height: 50px;
-    }
-
-    .tel {
-        float: none;
-        text-align: center;
-    }
-
-}
 
 *,
 *:after,
