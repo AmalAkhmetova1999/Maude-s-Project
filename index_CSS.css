@@ -51,6 +51,15 @@ button {
     z-index: 2;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: #633031;
+}
+
 .row {
     text-align: center;
     margin-left: auto;
@@ -61,8 +70,6 @@ button {
 .picture {
     width: 400px;
     text-align: center;
-
-
 }
 
 .twopic {
@@ -81,12 +88,6 @@ button {
         display: block;
         margin: 10px;
     }
-
-    .bookbutton {
-        width: 150px;
-        height: 40px;
-    }
-
 
 *,
 *:after,
