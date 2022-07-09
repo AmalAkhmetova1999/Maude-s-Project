@@ -13,13 +13,19 @@ h4 {
     font-size: 20px;
     line-height: 1.5;
 }
-.pcontact {text-align: left;}
 
-.hrcontact {
-    width: 100%;
+.pcontact {
+    text-align: left;
 }
-.googlemap{float: right;
+
+.googlemap {
+    float: right;
     max-width: 100%;
-border-radius: 2%;
-margin-bottom: 5%;
-margin-right: 2%;}
+    border-radius: 2%;
+    margin-bottom: 5%;
+    margin-right: 2%;
+}
+
+.stick {
+    border-left: 1px solid black;
+}
