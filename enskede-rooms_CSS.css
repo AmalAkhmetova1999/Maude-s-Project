@@ -17,7 +17,7 @@
 }
 
 .card {
-    width: 250px;
+    width: 350px;
     height: 350px;
     transform-style: preserve-3d;
     perspective: 500px;
@@ -51,8 +51,8 @@
 }
 
 .card .face.front-face .profile {
-    width: 150px;
-    height: 150px;
+    width: 220px;
+    height: 220px;
     border-radius: 10%;
     object-fit: cover;
 }
