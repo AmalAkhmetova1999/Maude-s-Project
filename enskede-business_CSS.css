@@ -155,5 +155,8 @@
         .links {
             --link-size: calc(var(--base-grid)*10);
         }
+        .circlepic {
+            width: 30px;
+        }
 
     }
