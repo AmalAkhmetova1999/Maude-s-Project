@@ -80,13 +80,12 @@ a:hover {
 }
 
 .picture {
-    width: 400px;
+    width: 800px;
+    height: 600px;
     text-align: center;
+    max-width: 100%;
 }
 
-.twopic {
-    margin-top: -5%;
-}
 
 @media only screen and (max-width:992px) {
     .pic {
@@ -105,6 +104,10 @@ a:hover {
         width: 150px;
         height: 45px;
         font-size: 14px;
+    }
+    .picture {
+        width: 400px;
+        height: auto;
     }
 }
 
