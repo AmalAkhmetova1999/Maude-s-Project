@@ -23,6 +23,10 @@
     perspective: 500px;
     border: none;
     background-color: inherit;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    
 }
 
 .card .face {
