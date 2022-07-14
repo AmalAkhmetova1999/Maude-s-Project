@@ -1,37 +1,69 @@
 .gym {
+    position: relative;
     height: 200px;
     width: 200px;
     border-radius: 50%;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 7%;
+    margin-top: 10%;
     font-size: 20px;
+    z-index: -1;
 }
 
-.gymopen {
-    display: ;
-   
+.gymop {
+    display: none;
+
 }
 
 .dumbbel {
     max-width: 100%;
     border-radius: 25px;
-    position: absolute;
+    position: relative;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    opacity: 0.7;
-    top: 25%;
-    right: 26%;
-    transform: translate(25%, 26%);
-   
+    top: -60%
 }
 
 .hard {
     background-color: azure;
-    position: absolute;
-     transform: translate(-40%, -15%);
-    bottom:-50%;
-    z-index: 4;
+    position: relative;
+    z-index: 1;
+    top: -115%;
+    left: 25%;
+    max-width: 50%;
+}
+
+@media only screen and (max-width:800px) {
+    .dumbbel {
+        top: -50%
+    }
+    .hard {
+        top: -100%;
+    }
+
+}
+@media only screen and (max-width:410px) {
+    .dumbbel {
+        top: -45%
+    }
+    .hard {
+        top: -93%;
+        max-width: 70%;
+        left: 15%;
+    }
+
+}
+@media only screen and (max-width:380px) {
+    .dumbbel {
+        top: -55%
+    }
+    .hard {
+        top: -100%;
+        max-width: 90%;
+        left: 5%;
+        font-size: 14px;
+    }
+
 }
