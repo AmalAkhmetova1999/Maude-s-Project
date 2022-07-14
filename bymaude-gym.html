@@ -29,11 +29,11 @@
 </header>
 <hr>
 
-<body>
+<body onload="gymhide()">
     <div class="container">
-        <button onclick="gym()" class="gym">GYM</button>
+        <button class="gym" id="gym" onclick="gyms()">GYM</button>
     </div>
-    <div class="gymop">
+    <div class="gymop" id="gymop">
         <div class="row">
             <div class="col-12">
                 <img class="dumbbel" src="dumbbel.jpg">
@@ -49,9 +49,12 @@
     </div>
 </body>
 <script>
-    function gym() {
-        $(".gymop").show()
+   
+    function gyms() {
+        $("#gymop").show();
     }
+
+
 </script>
 
 </html>
