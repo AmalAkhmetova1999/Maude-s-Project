@@ -26,15 +26,15 @@
         <h2>Booking</h2>
         <form action="/action_page.php">
             <br> <label for="fname">First name:</label><br>
-            <input type="text" id="fname" name="fname" value="Mike"><br><br>
+            <input type="text" id="fname" name="fname" placeholder="Mike"><br><br>
 
             <label for="lname">Last name:</label><br>
-            <input type="text" id="lname" name="lname" value="Brush"><br><br>
+            <input type="text" id="lname" name="lname" placeholder="Brush"><br><br>
             <label for="hotel" id="hotel">Hotel</label><br>
             <select>
                 <option value="enskede" label="Maude´s Hotel Enskede">
                 <option value="solna" label="Maude's Hotel Solna">
-                <option value="bymaude" label="Hotel By Maude Solna">
+                <option value="bymaude" label="Hotel By Maude">
             </select><br><br>
             <div class="row">
                 <div class="col-6">
@@ -46,28 +46,16 @@
                     <input type="date" id="start" name="trip-start" value=""><br><br>
                 </div>
             </div>
+            <label for="rooms">Room type:</label><br>
+            <select>
+                <option label="Single room">
+                <option label="Double room">
+                <option label="Twinbed room">
+                <option label="Superior double room">
+                <option label="Deluxe room">
+            </select><br><br>
             <div class="row">
-                <div class="col-6">
-                    <label for="nights">Nights:</label><br>
-                    <select>
-                        <option label="1">
-                        <option label="2">
-                        <option label="3">
-                        <option label="4">
-                        <option label="5">
-                        <option label="6">
-                        <option label="7">
-                        <option label="8">
-                        <option label="9">
-                        <option label="10">
-                        <option label="11">
-                        <option label="12">
-                        <option label="13">
-                        <option label="14">
-                        <option label="15">
-                    </select>
-                </div>
-                <div class="col-6">
+                <div class="col-4">
                     <label for="rooms">Rooms:</label><br>
                     <select>
                         <option label="1">
@@ -87,9 +75,7 @@
                         <option label="15">
                     </select>
                 </div>
-            </div><br>
-            <div class="row">
-                <div class="col-6">
+                <div class="col-4">
                     <label for="adults">Adults:</label><br>
                     <select>
                         <option label="1">
@@ -109,7 +95,7 @@
                         <option label="15">
                     </select>
                 </div>
-                <div class="col-6">
+                <div class="col-4">
                     <label for="children">Children:</label><br>
                     <select>
                         <option label="1">
@@ -131,7 +117,7 @@
                 </div>
             </div><br><br>
             <div class="row col-12">
-            <input class= "book" type="submit" value="BOOK">
+                <input class="book" type="submit" value="BOOK">
 
             </div>
         </form>
