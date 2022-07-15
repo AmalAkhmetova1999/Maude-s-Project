@@ -105,6 +105,7 @@ a:hover {
         height: 45px;
         font-size: 14px;
     }
+
     .picture {
         width: 400px;
         height: auto;
@@ -256,3 +257,16 @@ figure.effect-text-two:hover p {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
+<<<<<<< HEAD
+=======
+
+
+.hotel {
+    max-width: 100%;
+    width: 500px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+>>>>>>> 5133d2e832df34eeb302390e35bfa8d99ed3b028

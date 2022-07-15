@@ -8,11 +8,11 @@
     margin-right: auto;
     margin-top: 10%;
     font-size: 20px;
-    z-index: -1;
+    z-index: 1;
 }
 
 .gymop {
-    display: none;
+    display: none
 
 }
 
@@ -23,13 +23,14 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    top: -60%
+    top: -60%;
+    z-index: 2;
 }
 
 .hard {
     background-color: azure;
     position: relative;
-    z-index: 1;
+    z-index: 2;
     top: -115%;
     left: 25%;
     max-width: 50%;

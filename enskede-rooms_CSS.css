@@ -26,7 +26,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 5%;
-    
+
 }
 
 .card .face {
@@ -103,4 +103,10 @@
 }
 
 
-.smoke {text-align:center;}
+.smoke {
+    text-align: center;
+}
+
+.special {
+    font-size: 12px
+}
