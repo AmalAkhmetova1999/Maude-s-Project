@@ -30,10 +30,11 @@
 
             <label for="lname">Last name:</label><br>
             <input type="text" id="lname" name="lname" placeholder="Brush"><br><br>
-            <label for="hotel" id="hotel">Hotel</label><br>
-            <select>
+            <label for="hotel">Hotel</label><br>
+            <select id="hotel">
+
                 <option value="enskede" label="Maude´s Hotel Enskede">
-                <option value="solna" label="Maude's Hotel Solna">
+                <option value="solna" label="Maude's Hotel Solna" selected>
                 <option value="bymaude" label="Hotel By Maude">
             </select><br><br>
             <div class="row">
@@ -47,12 +48,12 @@
                 </div>
             </div>
             <label for="rooms">Room type:</label><br>
-            <select>
-                <option label="Single room">
-                <option label="Double room">
-                <option label="Twinbed room">
-                <option label="Superior double room">
-                <option label="Deluxe room">
+            <select id="first">
+                <option id="1" label="Single room">
+                <option id="2" label="Double room">
+                <option id="3" label="Twinbed room">
+                <option id="4" label="Superior double room">
+                <option id="5" label="Deluxe room">
             </select><br><br>
             <div class="row">
                 <div class="col-4">
@@ -129,5 +130,41 @@
     <p>Maude's Hotel<br>
         +46 (8) 600 5900</p>
 </footer>
+<script>
+    $(document).ready(function () {
+        $('#hotel').change(function () {
+            var selectedOption = $('#hotel option:selected');
+            if (selectedOption.val() == 'enskede') {
+                $('#1').show();
+                $('#2').show();
+                $('#3').show();
+                $('#4').show();
+                $('#5').hide();
+            } else $('#first').show();
+        });
+        $('#hotel').change(function () {
+            var selectedOption = $('#hotel option:selected');
+            if (selectedOption.val() == 'bymaude') {
+                $('#1').show();
+                $('#2').show();
+                $('#3').hide();
+                $('#4').show();
+                $('#5').show();
+            } else $('#first').show();
+        });
+        $('#hotel').change(function () {
+            var selectedOption = $('#hotel option:selected');
+            if (selectedOption.val() == 'solna') {
+                $('#1').show();
+                $('#2').show();
+                $('#3').show();
+                $('#4').show();
+                $('#5').show();
+            } else $('#first').show();
+        });
+
+
+    });
+</script>
 
 </html>
