@@ -1,0 +1,3 @@
+function gyms() {
+    $("#gymop").show();
+}
