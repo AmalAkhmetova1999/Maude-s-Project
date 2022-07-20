@@ -31,13 +31,26 @@
 
             <label for="lname">Last name:</label><br>
             <input type="text" id="lname" name="lname" placeholder="Brush"><br><br>
-            <label for="hotel">Hotel</label><br>
-            <select id="hotel">
-
-                <option value="enskede" label="Maude´s Hotel Enskede">
-                <option value="solna" label="Maude's Hotel Solna" selected>
-                <option value="bymaude" label="Hotel By Maude">
-            </select><br><br>
+            <div class="row">
+                <div class="col-6">
+                    <label for="hotel">Hotel</label><br>
+                    <select id="hotel">
+                        <option value="enskede" label="Maude´s Hotel Enskede">
+                        <option value="solna" label="Maude's Hotel Solna" selected>
+                        <option value="bymaude" label="Hotel By Maude">
+                    </select><br><br>
+                </div>
+                <div class="col-6">
+                    <label for="rooms">Room type:</label><br>
+                    <select id="first">
+                        <option id="1" label="Single room">
+                        <option id="2" label="Double room">
+                        <option id="3" label="Twinbed room">
+                        <option id="4" label="Superior double room">
+                        <option id="5" label="Deluxe room">
+                    </select><br><br>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-6">
                     <label for="arrival">Arrival date:</label>
@@ -48,14 +61,6 @@
                     <input type="date" id="start" name="trip-start" value=""><br><br>
                 </div>
             </div>
-            <label for="rooms">Room type:</label><br>
-            <select id="first">
-                <option id="1" label="Single room">
-                <option id="2" label="Double room">
-                <option id="3" label="Twinbed room">
-                <option id="4" label="Superior double room">
-                <option id="5" label="Deluxe room">
-            </select><br><br>
             <div class="row">
                 <div class="col-4">
                     <label for="rooms">Rooms:</label><br>
