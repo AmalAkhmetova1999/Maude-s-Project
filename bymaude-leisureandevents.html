@@ -13,7 +13,7 @@
 </head>
 <header>
     <a href="index.html"><img class="logo" src="pictures/bymaudelogo.png"></a>
-    <a href="booking.html" target="_blank"><button class="bookbutton">BOOK ONLINE</button></a>
+    <a href="booking.html" target="_blank"><button class="bookbutton" onclick="book()">BOOK ONLINE</button></a>
     <ul>
         <li> <a href="bymaude.html">Home</a></li>
         <li> <a href="bymaude-business.html">Business</a></li>
@@ -64,3 +64,9 @@
 </footer>
 
 </html>
+<script>
+    
+    function book() {
+        localStorage.setItem('main', 'bymaude')
+    }
+</script>

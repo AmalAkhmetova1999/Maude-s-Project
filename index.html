@@ -11,7 +11,7 @@
 </head>
 <header>
     <img class="logo" src=" pictures/logo2.png">
-    <a href="booking.html" target="_blank"><button class="bookbutton">BOOK ONLINE</button></a>
+    <a href="booking.html" target="_blank"><button class="bookbutton" onclick="book()">BOOK ONLINE</button></a>
     <ul>
         <li> <a href="enskede.html">Maude´s Hotel Enskede</a> </li>
         <li><a href="solna.html">Maude's Hotel Solna</a></li>
@@ -43,3 +43,12 @@
 </footer>
 
 </html>
+<script>
+    /*
+    function book() {
+        localStorage.setItem('book', 'j1');
+    }*/
+    function book() {
+        localStorage.setItem('main', 'solna')
+    }
+</script>

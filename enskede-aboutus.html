@@ -14,7 +14,7 @@
 </head>
 <header>
     <a href="index.html"><img class="logo" src=" pictures/enskedelogo.png"></a>
-    <a href="booking.html" target="_blank"><button class="bookbutton">BOOK ONLINE</button></a>
+    <a href="booking.html" target="_blank"><button class="bookbutton" onclick="book()">BOOK ONLINE</button></a>
     <ul>
         <li> <a href="enskede.html">Home</a></li>
         <li> <a href="enskede-business.html">Business</a></li>
@@ -154,3 +154,9 @@
 </footer>
 
 </html>
+<script>
+    
+    function book() {
+        localStorage.setItem('main', 'enskede')
+    }
+</script>
