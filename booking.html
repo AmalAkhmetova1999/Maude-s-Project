@@ -25,16 +25,16 @@
 <body>
     <div class="login-box">
         <h2 id="book1">Booking</h2>
-        <form action="/action_page.php">
+        <form name="myForm" action="index.html" onsubmit="return validateForm()">
             <br> <label for="fname">First name:</label><br>
-            <input type="text" id="fname" name="fname" placeholder="Mike"><br><br>
+            <input type="text" id="fname" name="fname" placeholder="Mike" class="a"><br><br>
 
             <label for="lname">Last name:</label><br>
-            <input type="text" id="lname" name="lname" placeholder="Brush"><br><br>
+            <input type="text" id="lname" name="lname" placeholder="Brush" class="a"><br><br>
             <div class="row">
                 <div class="col-6">
                     <label for="hotel">Hotel</label><br>
-                    <select id="hotel">
+                    <select id="hotel" required class="a">
                         <option value="enskede" label="Maude's Hotel Enskede"></option>
                         <option value="solna" label="Maude's Hotel Solna">
                         <option value="bymaude" label="Hotel By Maude">
@@ -42,7 +42,7 @@
                 </div>
                 <div class="col-6">
                     <label for="rooms">Room type:</label><br>
-                    <select id="first">
+                    <select id="first" required class="a">
                         <option id="1" label="Single room">
                         <option id="2" label="Double room">
                         <option id="3" label="Twinbed room">
@@ -54,17 +54,17 @@
             <div class="row">
                 <div class="col-6">
                     <label for="arrival">Arrival date:</label>
-                    <input type="date" id="start" name="trip-start" value=""><br><br>
+                    <input type="date" id="start" name="trip-start" value="" required class="a"><br><br>
                 </div>
                 <div class="col-6">
                     <label for="departure">Date of departure:</label>
-                    <input type="date" id="start" name="trip-start" value=""><br><br>
+                    <input type="date" id="finish" name="trip-start" value="" required class="a"><br><br>
                 </div>
             </div>
             <div class="row">
                 <div class="col-4">
                     <label for="rooms">Rooms:</label><br>
-                    <select>
+                    <select required class="a">
                         <option label="1">
                         <option label="2">
                         <option label="3">
@@ -84,7 +84,7 @@
                 </div>
                 <div class="col-4">
                     <label for="adults">Adults:</label><br>
-                    <select>
+                    <select required class="a">
                         <option label="1">
                         <option label="2">
                         <option label="3">
@@ -104,7 +104,7 @@
                 </div>
                 <div class="col-4">
                     <label for="children">Children:</label><br>
-                    <select>
+                    <select required class="a">
                         <option label="1">
                         <option label="2">
                         <option label="3">
@@ -124,7 +124,7 @@
                 </div>
             </div><br><br>
             <div class="row col-12">
-                <input class="book" type="submit" value="BOOK">
+                <input class="book" type="submit" value="BOOK" onclick="push()">
 
             </div>
         </form>
@@ -159,6 +159,38 @@
         document.getElementById("hotel").value = "enskede";
     } else {
         document.getElementById("hotel").value = "bymaude";
+    }
+    var today = new Date();
+    var tomorrow = new Date(today.getTime() + (24 * 60 * 60 * 1000));
+
+    document.getElementById('start').value = new Date().toISOString().substring(0, 10);
+    document.getElementById('finish').value = tomorrow.toISOString().substring(0, 10);
+
+    function push() {
+
+        fetch('http://localhost:5000/getOneParam?name=%27')
+            .then((res) => {
+                if (res.status >= 200 && res.status < 300) {
+                    console.log('+');
+                    alert('Спасибо,регистрация прошла успешно!');
+                } else {
+                    console.log('-');
+                    alert('Ошибка, попробуйте снова.');
+                }
+            })
+
+    }
+
+    function validateForm() {
+        let x = document.forms["myForm"]["fname"].value;
+        let y = document.forms["myForm"]["lname"].value;
+        if (x == "") {
+            alert("Write your first name");
+            return false;
+        } else if (y == "") {
+            alert("Write your last name");
+            return false;
+        }
     }
 </script>
 
