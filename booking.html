@@ -7,9 +7,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="booking_JS.js"></script>
+    <script type="module" src="booking_JS.js"></script>
     <link rel="stylesheet" href="index_CSS.css">
     <link rel="stylesheet" href="booking_CSS.css">
+    <script type="module" src="singleRoom.js"></script>
 </head>
 <header>
     <a href="index.html"><img class="logo" src=" pictures/logo2.png"></a>
@@ -22,10 +23,10 @@
 </header>
 <hr>
 
-<body>
+<body onload="select()">
     <div class="login-box">
         <h2 id="book1">Booking</h2>
-        <form name="myForm" action="index.html" onsubmit="return validateForm()">
+        <form name="myForm">
             <br> <label for="fname">First name:</label><br>
             <input type="text" id="fname" name="fname" placeholder="Mike" class="a"><br><br>
 
@@ -35,19 +36,19 @@
                 <div class="col-6">
                     <label for="hotel">Hotel</label><br>
                     <select id="hotel" required class="a">
-                        <option value="enskede" label="Maude's Hotel Enskede"></option>
+                        <option value="enskede" label="Maude's Hotel Enskede">
                         <option value="solna" label="Maude's Hotel Solna">
                         <option value="bymaude" label="Hotel By Maude">
                     </select><br><br>
                 </div>
                 <div class="col-6">
-                    <label for="rooms">Room type:</label><br>
-                    <select id="first" required class="a">
-                        <option id="1" label="Single room">
-                        <option id="2" label="Double room">
-                        <option id="3" label="Twinbed room">
-                        <option id="4" label="Superior double room">
-                        <option id="5" label="Deluxe room">
+                    <label for="roomst">Room type:</label><br>
+                    <select id="first" class="a">
+                        <option id="1">Single room</option>
+                        <option id="2">Double room</option>
+                        <option id="3">Twinbed room</option>
+                        <option id="4">Superior double room</option>
+                        <option id="5">Deluxe room</option>
                     </select><br><br>
                 </div>
             </div>
@@ -58,13 +59,13 @@
                 </div>
                 <div class="col-6">
                     <label for="departure">Date of departure:</label>
-                    <input type="date" id="finish" name="trip-start" value="" required class="a"><br><br>
+                    <input type="date" id="finish" name="trip-finish" value="" required class="a"><br><br>
                 </div>
             </div>
             <div class="row">
                 <div class="col-4">
                     <label for="rooms">Rooms:</label><br>
-                    <select required class="a">
+                    <select class="a" id="selectRoom">
                         <option label="1">
                         <option label="2">
                         <option label="3">
@@ -84,42 +85,43 @@
                 </div>
                 <div class="col-4">
                     <label for="adults">Adults:</label><br>
-                    <select required class="a">
-                        <option label="1">
-                        <option label="2">
-                        <option label="3">
-                        <option label="4">
-                        <option label="5">
-                        <option label="6">
-                        <option label="7">
-                        <option label="8">
-                        <option label="9">
-                        <option label="10">
-                        <option label="11">
-                        <option label="12">
-                        <option label="13">
-                        <option label="14">
-                        <option label="15">
+                    <select id="selectAdult" class="a">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
                     </select>
                 </div>
                 <div class="col-4">
                     <label for="children">Children:</label><br>
-                    <select required class="a">
-                        <option label="1">
-                        <option label="2">
-                        <option label="3">
-                        <option label="4">
-                        <option label="5">
-                        <option label="6">
-                        <option label="7">
-                        <option label="8">
-                        <option label="9">
-                        <option label="10">
-                        <option label="11">
-                        <option label="12">
-                        <option label="13">
-                        <option label="14">
-                        <option label="15">
+                    <select id="selectChild" class="a">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
                     </select>
                 </div>
             </div><br><br>
@@ -167,21 +169,29 @@
     document.getElementById('finish').value = tomorrow.toISOString().substring(0, 10);
 
     function push() {
-
-        fetch('http://localhost:5000/getOneParam?name=%27')
-            .then((res) => {
-                if (res.status >= 200 && res.status < 300) {
-                    console.log('+');
-                    alert('Спасибо,регистрация прошла успешно!');
-                } else {
-                    console.log('-');
-                    alert('Ошибка, попробуйте снова.');
-                }
-            })
+        var adults = document.getElementById("selectAdult").value;
+        var children = document.getElementById("selectChildren").value;
+        var roomType = document.getElementById("first").value;
+        console.log(adults + children + roomType);
+        if (validateForm2(adults, children, roomType)) {
+            fetch('http://localhost:5000/getTest')
+                /*fetch('http://localhost:5000/getOneParam?' + new URLSearchParams)({
+                        name: document.getElementById('fname').value
+                    })*/
+                .then((res) => {
+                    if (res.status >= 200 && res.status < 300) {
+                        console.log('+');
+                        alert('Спасибо,регистрация прошла успешно!');
+                    } else {
+                        console.log('-');
+                        alert('Ошибка, попробуйте снова.');
+                    }
+                })
+        }
 
     }
 
-    function validateForm() {
+    /*function validateForm() {
         let x = document.forms["myForm"]["fname"].value;
         let y = document.forms["myForm"]["lname"].value;
         if (x == "") {
@@ -190,7 +200,71 @@
         } else if (y == "") {
             alert("Write your last name");
             return false;
+        } else {
+            return true;
         }
+    }*/
+
+    /*function validateForm2() {
+        console.log('inside');
+        let a = document.getElementById("first").value;
+        let b = document.getElementById("selectAdult").value;
+        let c = document.getElementById("selectChild").value;
+        if (a == 'Single room' && c > "1") {
+            alert("maximum adult occupancy in Single room: 1, maximum child occupancy in Single room: 1");
+            return false;
+        } else if (a == 'Single room' && b > "1") {
+            alert("maximum adult occupancy in Single room: 1, maximum child occupancy in Single room: 1");
+            return false;
+        } else if (a == 'Double room' && b > "2" && c > "1") {
+            alert("maximum adult occupancy in Double room: 2, maximum child occupancy in Double room: 1");
+            return false;
+        } else if (a == 'Double room' && b > "1" && c > "2") {
+            alert("maximum adult occupancy in Double room: 1, maximum child occupancy in Double room: 2");
+            return false;
+        } else if (a == 'Twinbed room' && b > "2" && c > "1") {
+            alert("maximum adult occupancy in Twinbed room: 2, maximum child occupancy in Twinbed room: 1");
+            return false;
+        } else if (a == 'Twinbed room' && b > "1" && c > "2") {
+            alert("maximum adult occupancy in Twinbed room: 1, maximum child occupancy in Twinbed room: 2");
+            return false;
+        } else if (a == 'Superior double room' && b > "3" && c > "1") {
+            alert(
+                "maximum adult occupancy in Superior double room: 3, maximum child occupancy in Superior double room: 1"
+            );
+            return false;
+        } else if (a == 'Superior double room' && b > "2" && c > "2") {
+            alert(
+                "maximum adult occupancy in Superior double room: 2, maximum child occupancy in Superior double room: 2"
+            );
+            return false;
+        } else if (a == 'Superior double room' && b > "1" && c > "3") {
+            alert(
+                "maximum adult occupancy in Superior double room: 1, maximum child occupancy in Superior double room: 3"
+            );
+            return false;
+        } else if (a == 'Deluxe room' && b > "4" && c > "1") {
+            alert("maximum adult occupancy in Deluxe room: 4, maximum child occupancy in Deluxe room: 1");
+            return false;
+        } else if (a == 'Deluxe room' && b > "3" && c > "2") {
+            alert("maximum adult occupancy in Deluxe room: 3, maximum child occupancy in Deluxe room: 2");
+            return false;
+        } else if (a == 'Deluxe room' && b > "2" && c > "3") {
+            alert("maximum adult occupancy in Deluxe room: 2, maximum child occupancy in Deluxe room: 3");
+            return false;
+        } else if (a == 'Deluxe room' && b > "1" && c > "4") {
+            alert("maximum adult occupancy in Deluxe room: 1, maximum child occupancy in Deluxe room: 4");
+            return false;
+        } else
+            alert("ок");
+        return true;
+
+    }*/
+
+    function select() {
+        document.getElementById("selectRoom").selectedIndex = "1";
+        document.getElementById("selectAdult").selectedIndex = "2";
+        document.getElementById("selectChild").selectedIndex = "0";
     }
 </script>
 
