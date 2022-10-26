@@ -66,21 +66,22 @@
                 <div class="col-4">
                     <label for="rooms">Rooms:</label><br>
                     <select class="a" id="selectRoom">
-                        <option label="1">
-                        <option label="2">
-                        <option label="3">
-                        <option label="4">
-                        <option label="5">
-                        <option label="6">
-                        <option label="7">
-                        <option label="8">
-                        <option label="9">
-                        <option label="10">
-                        <option label="11">
-                        <option label="12">
-                        <option label="13">
-                        <option label="14">
-                        <option label="15">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                       
                     </select>
                 </div>
                 <div class="col-4">
@@ -126,7 +127,7 @@
                 </div>
             </div><br><br>
             <div class="row col-12">
-                <input class="book" type="submit" value="BOOK" onclick="push()">
+                <input class="book" type="submit" value="BOOK" id="pushButton">
 
             </div>
         </form>
@@ -155,6 +156,8 @@
 
     }*/
 
+   
+
     if (localStorage.getItem('main') === "solna") {
         document.getElementById("hotel").value = "solna";
     } else if (localStorage.getItem("main") === ("enskede")) {
@@ -168,28 +171,7 @@
     document.getElementById('start').value = new Date().toISOString().substring(0, 10);
     document.getElementById('finish').value = tomorrow.toISOString().substring(0, 10);
 
-    function push() {
-        var adults = document.getElementById("selectAdult").value;
-        var children = document.getElementById("selectChildren").value;
-        var roomType = document.getElementById("first").value;
-        console.log(adults + children + roomType);
-        if (validateForm2(adults, children, roomType)) {
-            fetch('http://localhost:5000/getTest')
-                /*fetch('http://localhost:5000/getOneParam?' + new URLSearchParams)({
-                        name: document.getElementById('fname').value
-                    })*/
-                .then((res) => {
-                    if (res.status >= 200 && res.status < 300) {
-                        console.log('+');
-                        alert('Спасибо,регистрация прошла успешно!');
-                    } else {
-                        console.log('-');
-                        alert('Ошибка, попробуйте снова.');
-                    }
-                })
-        }
 
-    }
 
     /*function validateForm() {
         let x = document.forms["myForm"]["fname"].value;
@@ -262,8 +244,8 @@
     }*/
 
     function select() {
-        document.getElementById("selectRoom").selectedIndex = "1";
-        document.getElementById("selectAdult").selectedIndex = "2";
+        document.getElementById("selectRoom").selectedIndex = "0";
+        document.getElementById("selectAdult").selectedIndex = "0";
         document.getElementById("selectChild").selectedIndex = "0";
     }
 </script>
