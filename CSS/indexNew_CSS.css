@@ -1,0 +1,62 @@
+@font-face {
+    font-family: CaviarDreams;
+    src: url(CaviarDreams.ttf);
+
+}
+
+body {
+
+
+
+
+    background: url('../pictures/enskede1.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+
+}
+
+.rectangle {
+    background: linear-gradient(45deg, #eecfba93, #c4f3e4aa);
+    
+    margin-top: 20%;
+
+    color: #633031;
+}
+
+.rectangleButton {
+    background: linear-gradient(45deg, #eecfbab3, #c4f3e4c6);
+    margin-left: 4.1%;
+    text-align: left;
+    border: none;
+    color: #633031;
+    font-size: 12pt;
+
+}
+
+.rectangleRight {
+    background: linear-gradient(45deg, #eecfba93, #c4f3e4aa);
+    
+    margin-top: 20%;
+    color: #633031;
+    font-size: 22pt;
+    width: 4%;
+    border: none;
+    
+}
+
+.rectangleLeft {
+    background: linear-gradient(45deg, #eecfba93, #c4f3e4aa);
+    margin-left: 5%;
+    margin-top: 20%;
+    color: #633031;
+    font-size: 22pt;
+    width: 4%;
+    border: none;
+}
+
+h6 {
+    font-size: 16pt;
+    line-height: 25pt;
+}
