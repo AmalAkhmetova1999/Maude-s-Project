@@ -17,58 +17,70 @@
 
 <body>
     <div id="add">
+        
         <div class="row">
-            <button class="rectangleLeft col-1">↰</button>
-            <div class="rectangle col-3">
-                <h6>Välkommen till Maude´s Hotel - med rum för drömmar! <br>Välj det Hotell som passar dig och kom och
-                    besök!
+            
+            <button class="rectangleLeft col-1"> </button>
+            <div class="rectangle col-4">
+                <h6>Välkommen till Hotel Maud - med drömrum!<br>
+                    Välj det hotell som passar dig och kom och besök!<br>
+                    Nedan kan du boka ett rum i Maude´s Enskede Hotel
                 </h6>
 
             </div>
-            <button onclick="change()" class="rectangleRight col-1">↱</button>
+            <button onclick="change()" class="rectangleRight col-1">
+                <p class="pRight "> Hotel Solna</p>
+            </button>
         </div>
 
-        <a href="enskede/enskede.html" id="change"><button class="rectangleButton col-2">BOOK ONLINE➩</button></a>
+        <a href="enskede/enskede.html" id="change"><button class="rectangleButton col-2">BOOK ONLINE</button></a>
+        
     </div>
 </body>
 <script>
     function change() {
         document.getElementById('add').innerHTML =
-            `<div class="row"><button onclick=change3() class="rectangleLeft col-1">↰</button>
-        <div class="rectangle col-3">
+            `<div class="row"><button onclick=change3() class="rectangleLeft col-1"><p class="pLeft">Enskede Hotel</p></button>
+        <div class="rectangle col-4">
             <h6>Välkommen till Maude´s Hotel - med rum för drömmar! <br>Välj det Hotell som passar dig och kom och
-                besök!
+                besök!<br>Nedan kan du boka ett rum i Maude´s Hotel Solna Business Park
             </h6>
 
         </div>
-        <button onclick="change2()" class="rectangleRight col-1">↱</button>
-        <a href="solna/solna.html" id="change"><button class="rectangleButton col-2">BOOK ONLINE➩</button></a></div>`
+        <button onclick="change2()" class="rectangleRight col-1"><p class="pRight">Hotel By Maude</p></button>
+        <a href="solna/solna.html" id="change"><button class="rectangleButton col-2">BOOK ONLINE</button></a></div>`
+        document.getElementsByTagName("body")[0].style.backgroundImage ='url(../pictures/solna1.jpg)';
+        document.getElementsByClassName("rectangle")[0].style.background='linear-gradient(45deg, white, white);'
+
     }
 
     function change2() {
         document.getElementById('add').innerHTML =
-            `<div class="row"><button onclick=change() class="rectangleLeft col-1">↰</button>
-        <div class="rectangle col-3">
+            `<div class="row"><button onclick=change() class="rectangleLeft col-1"><p class="pLeft">Hotel Solna</p></button>
+        <div class="rectangle col-4">
             <h6>Välkommen till Maude´s Hotel - med rum för drömmar! <br>Välj det Hotell som passar dig och kom och
-                besök!
+                besök!<br>Nedan kan du boka ett rum i Hotel By Maude Solna
             </h6>
 
         </div>
-        <button class="rectangleRight col-1">↱</button>
-        <a href="byMaude/bymaude.html" id="change"><button class="rectangleButton col-2">BOOK ONLINE➩</button></a></div>`
+        <button onclick="change3()" class="rectangleRight col-1"><p class="pRight">Enskede Hotel</p></button>
+        <a href="byMaude/bymaude.html" id="change"><button class="rectangleButton col-2">BOOK ONLINE</button></a></div>`
+        document.getElementsByTagName("body")[0].style.backgroundImage ='url(../pictures/bymaude2.jpg)'
     }
 
     function change3() {
         document.getElementById('add').innerHTML =
-            `<div class="row"><button onclick=change3() class="rectangleLeft col-1">↰</button>
-        <div class="rectangle col-3">
-            <h6>Välkommen till Maude´s Hotel - med rum för drömmar! <br>Välj det Hotell som passar dig och kom och
-                besök!
+            `<div class="row"><button onclick=change2() class="rectangleLeft col-1"><p class="pLeft">Hotel By Maude</p></button>
+        <div class="rectangle col-4">
+            <h6>Välkommen till Hotel Maud - med drömrum!<br>
+                    Välj det hotell som passar dig och kom och besök!<br>
+                    Nedan kan du boka ett rum i Maude´s Enskede Hotel
             </h6>
 
         </div>
-        <button onclick="change2()" class="rectangleRight col-1">↱</button>
-        <a href="enskede/enskede.html" id="change"><button class="rectangleButton col-2">BOOK ONLINE➩</button></a></div>`
+        <button  onclick=change() class="rectangleRight col-1"><p class="pRight">Hotel Solna</p></button>
+        <a href="enskede/enskede.html" id="change"><button class="rectangleButton col-2">BOOK ONLINE</button></a></div>`
+        document.getElementsByTagName("body")[0].style.backgroundImage ='url(../pictures/enskede1.jpeg)'
     }
 </script>
 

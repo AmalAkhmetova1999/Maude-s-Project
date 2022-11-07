@@ -3,25 +3,16 @@
     src: url(CaviarDreams.ttf);
 
 }
-
 body {
-
-
-
 
     background: url('../pictures/enskede1.jpeg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; }
 
-
-
-}
 
 .rectangle {
     background: linear-gradient(45deg, #eecfba93, #c4f3e4aa);
-    
     margin-top: 20%;
-
     color: #633031;
 }
 
@@ -37,13 +28,25 @@ body {
 
 .rectangleRight {
     background: linear-gradient(45deg, #eecfba93, #c4f3e4aa);
-    
     margin-top: 20%;
     color: #633031;
     font-size: 22pt;
     width: 4%;
     border: none;
-    
+}
+
+.pRight {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    font-size: 10pt;
+
+}
+
+.pLeft {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    font-size: 10pt;
+
 }
 
 .rectangleLeft {
@@ -54,9 +57,11 @@ body {
     font-size: 22pt;
     width: 4%;
     border: none;
+
 }
 
 h6 {
     font-size: 16pt;
     line-height: 25pt;
 }
+
