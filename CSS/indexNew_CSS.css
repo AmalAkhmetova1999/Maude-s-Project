@@ -3,22 +3,23 @@
     src: url(CaviarDreams.ttf);
 
 }
+
 body {
 
     background: url('../pictures/enskede1.jpeg');
     background-repeat: no-repeat;
-    background-size: cover; }
+    background-size: cover;
+}
 
 
 .rectangle {
-    background: linear-gradient(45deg, #eecfba93, #c4f3e4aa);
+    background: linear-gradient(45deg, #ffe9da7a, #e8fbf5aa);
     margin-top: 20%;
     color: #633031;
 }
 
 .rectangleButton {
-    background: linear-gradient(45deg, #eecfbab3, #c4f3e4c6);
-    margin-left: 4.1%;
+    background: linear-gradient(45deg, #ffe9da7a, #e8fbf5aa);
     text-align: left;
     border: none;
     color: #633031;
@@ -27,35 +28,37 @@ body {
 }
 
 .rectangleRight {
-    background: linear-gradient(45deg, #eecfba93, #c4f3e4aa);
+    background: linear-gradient(45deg, #ffe9da7a, #e8fbf5aa);
     margin-top: 20%;
     color: #633031;
     font-size: 22pt;
-    width: 4%;
+    width: 5%;
     border: none;
 }
 
-.pRight {
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
-    font-size: 10pt;
-
+.pButton {
+    font-size: 20pt;
+    margin-top: 110%;
+    display: inline;
 }
 
-.pLeft {
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
+.vis {
+    visibility: hidden;
     font-size: 10pt;
+    margin-top: -30%;
+}
+
+.pButton:hover+.vis {
+    visibility: visible;
 
 }
 
 .rectangleLeft {
-    background: linear-gradient(45deg, #eecfba93, #c4f3e4aa);
-    margin-left: 5%;
+    background: linear-gradient(45deg, #ffe9da7a, #e8fbf5aa);
     margin-top: 20%;
     color: #633031;
     font-size: 22pt;
-    width: 4%;
+    width: 5%;
     border: none;
 
 }
@@ -65,3 +68,35 @@ h6 {
     line-height: 25pt;
 }
 
+a {
+    text-decoration: none;
+    color: #633031;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #633031;
+}
+
+@media only screen and (max-width:780px) {
+    .rectangleRight {
+        width: 10%;
+    }
+
+    .rectangleLeft {
+        width: 10%;
+
+    }
+
+    @media only screen and (max-width:620px) {
+        .vis {
+            font-size: 8pt
+        }
+    }
+
+    @media only screen and (max-width:520px) {
+        .vis {
+            font-size: 6pt
+        }
+    }
+}

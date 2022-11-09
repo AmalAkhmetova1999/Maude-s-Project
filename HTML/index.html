@@ -17,70 +17,104 @@
 
 <body>
     <div id="add">
-        
+
         <div class="row">
-            
-            <button class="rectangleLeft col-1"> </button>
-            <div class="rectangle col-4">
+            <div class="col-md-1 col-2"></div>
+            <button class="rectangleLeft"> </button>
+            <div class="rectangle col-md-4 col-sm-6 col-6">
                 <h6>Välkommen till Hotel Maud - med drömrum!<br>
                     Välj det hotell som passar dig och kom och besök!<br>
                     Nedan kan du boka ett rum i Maude´s Enskede Hotel
                 </h6>
 
             </div>
-            <button onclick="change()" class="rectangleRight col-1">
-                <p class="pRight "> Hotel Solna</p>
+            <button onclick="change()" class="rectangleRight">
+                <p class="pButton"> > </p>
+                <p class="vis">Hotel Solna</p>
             </button>
         </div>
+        <div class="row">
+            <div class="col-md-1 col-4"></div>
+            <button class="rectangleButton col-md-3 col-4"> <a href="enskede/enskede.html" id="change">BOOK
+                    ONLINE</a></button>
+        </div>
 
-        <a href="enskede/enskede.html" id="change"><button class="rectangleButton col-2">BOOK ONLINE</button></a>
-        
     </div>
 </body>
 <script>
     function change() {
         document.getElementById('add').innerHTML =
-            `<div class="row"><button onclick=change3() class="rectangleLeft col-1"><p class="pLeft">Enskede Hotel</p></button>
-        <div class="rectangle col-4">
+            `<div class="row"><div class="col-md-1 col-2"></div><button onclick=change3() class="rectangleLeft"><p class="pButton"><</p><p class="vis">Enskede Hotel</p></button>
+                <div class="rectangle col-md-4 col-sm-6 col-6">
             <h6>Välkommen till Maude´s Hotel - med rum för drömmar! <br>Välj det Hotell som passar dig och kom och
                 besök!<br>Nedan kan du boka ett rum i Maude´s Hotel Solna Business Park
             </h6>
 
         </div>
-        <button onclick="change2()" class="rectangleRight col-1"><p class="pRight">Hotel By Maude</p></button>
-        <a href="solna/solna.html" id="change"><button class="rectangleButton col-2">BOOK ONLINE</button></a></div>`
-        document.getElementsByTagName("body")[0].style.backgroundImage ='url(../pictures/solna1.jpg)';
-        document.getElementsByClassName("rectangle")[0].style.background='linear-gradient(45deg, white, white);'
+        <button onclick="change2()" class="rectangleRight"><p class="pButton">></p><p class="vis">Hotel By Maude</p></button>
+        </div>
+        <div class="row">
+            <div class="col-md-1 col-4"></div>
+            <button class="rectangleButton col-md-3 col-4"><a href="solna/solna.html" id="change">BOOK ONLINE</a></button>
+        </div>
+        </div>`
+        document.getElementsByTagName("body")[0].style.backgroundImage = 'url(../pictures/solna1.jpg)';
+        document.getElementsByClassName("rectangle")[0].style.background =
+            '-webkit-radial-gradient(#c5bfc6aa, #f4e5d97c)';
+        document.getElementsByClassName("rectangleRight")[0].style.background =
+            '-webkit-radial-gradient(#efd8c87a, #c5bfc6aa)';
+        document.getElementsByClassName("rectangleLeft")[0].style.background =
+            '-webkit-radial-gradient(#efd8c87a, #c5bfc6aa)';
+        document.getElementsByClassName("rectangleButton")[0].style.background =
+            '-webkit-radial-gradient(#c5bfc6aa, #efd8c87a)'
 
     }
 
     function change2() {
         document.getElementById('add').innerHTML =
-            `<div class="row"><button onclick=change() class="rectangleLeft col-1"><p class="pLeft">Hotel Solna</p></button>
-        <div class="rectangle col-4">
+            `<div class="row"><div class="col-md-1 col-2"></div><button onclick=change() class="rectangleLeft"><p class="pButton"><</p><p class="vis">Hotel Solna</p></button>
+                <div class="rectangle col-md-4 col-sm-6 col-6">
             <h6>Välkommen till Maude´s Hotel - med rum för drömmar! <br>Välj det Hotell som passar dig och kom och
                 besök!<br>Nedan kan du boka ett rum i Hotel By Maude Solna
             </h6>
 
         </div>
-        <button onclick="change3()" class="rectangleRight col-1"><p class="pRight">Enskede Hotel</p></button>
-        <a href="byMaude/bymaude.html" id="change"><button class="rectangleButton col-2">BOOK ONLINE</button></a></div>`
-        document.getElementsByTagName("body")[0].style.backgroundImage ='url(../pictures/bymaude2.jpg)'
+        <button onclick="change3()" class="rectangleRight"><p class="pButton">></p><p class="vis">Enskede Hotel</p></button>
+        </div>
+        <div class="row">
+            <div class="col-md-1 col-4"></div>
+            <button class="rectangleButton col-md-3 col-4"><a href="byMaude/bymaude.html" id="change">BOOK ONLINE</a></button>
+        </div>
+        </div>`
+        document.getElementsByTagName("body")[0].style.backgroundImage = 'url(../pictures/bymaude2.jpg)';
+        document.getElementsByClassName("rectangle")[0].style.background =
+            '-webkit-radial-gradient( #dfeefaa3, #e4cbe8b3)';
+        document.getElementsByClassName("rectangleRight")[0].style.background =
+            '-webkit-radial-gradient( #dfeefaa3, #e4cbe8b3)';
+        document.getElementsByClassName("rectangleLeft")[0].style.background =
+            '-webkit-radial-gradient(  #dfeefaa3, #e4cbe8b3)';
+        document.getElementsByClassName("rectangleButton")[0].style.background =
+            '-webkit-radial-gradient(#e4cbe8b3, #dfeefaa3)'
     }
 
     function change3() {
         document.getElementById('add').innerHTML =
-            `<div class="row"><button onclick=change2() class="rectangleLeft col-1"><p class="pLeft">Hotel By Maude</p></button>
-        <div class="rectangle col-4">
-            <h6>Välkommen till Hotel Maud - med drömrum!<br>
-                    Välj det hotell som passar dig och kom och besök!<br>
-                    Nedan kan du boka ett rum i Maude´s Enskede Hotel
+            `<div class="row"><div class="col-md-1 col-2"></div><button onclick=change2() class="rectangleLeft"><p class="pButton"><</p><p class="vis">Hotel By Maude</p></button>
+                <div class="rectangle col-md-4 col-sm-6 col-6">
+            <h6>Välkommen till Maude´s Hotel - med rum för drömmar! <br>Välj det Hotell som passar dig och kom och
+                besök!<br>Nedan kan du boka ett rum i Hotel By Maude Solna
             </h6>
 
         </div>
-        <button  onclick=change() class="rectangleRight col-1"><p class="pRight">Hotel Solna</p></button>
-        <a href="enskede/enskede.html" id="change"><button class="rectangleButton col-2">BOOK ONLINE</button></a></div>`
-        document.getElementsByTagName("body")[0].style.backgroundImage ='url(../pictures/enskede1.jpeg)'
+        <button onclick="change()" class="rectangleRight"><p class="pButton">></p><p class="vis">Hotel Solna</p></button>
+        </div>
+        <div class="row">
+            <div class="col-md-1 col-4"></div>
+            <button class="rectangleButton col-md-3 col-4"><a href="enskede/enskede.html" id="change">BOOK ONLINE</a></button>
+        </div>
+        </div>`
+        document.getElementsByTagName("body")[0].style.backgroundImage = 'url(../pictures/enskede1.jpeg)'
+
     }
 </script>
 
