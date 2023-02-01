@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../CSS/index_CSS.css">
+    <link rel="stylesheet" href="../../CSS/hotel_CSS.css">
+    <link rel="stylesheet" href="../../CSS/enskede-rooms_CSS.css">
+</head>
+<header>
+    <a href="../index.html"><img class="logo" src="../../pictures/bymaudelogo.png"></a>
+    <a href="../booking.html" target="_blank"><button class="bookbutton" onclick="book()">BOOK ONLINE</button></a>
+    <ul>
+        <li> <a href="../byMaude/bymaude.html">Home</a></li>
+        <li> <a href="../byMaude/bymaude-business.html">Business</a></li>
+        <li><a href="../byMaude/bymaude-leisureandevents.html"> Leisure & Events</a> </li>
+        <li><a href="../byMaude/bymaude-gym.html"> GYM</a> </li>
+        <li> <a href="../byMaude/bymaude-rooms.html">Rooms</a></li>
+        <li> <a href="../byMaude/bymaude-aboutus.html">About Us</a> </li>
+        <li> <a href="../byMaude/bymaude-contact.html">Contact</a> </li>
+    </ul>
+</header>
+<hr>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card">
+                    <div class="face front-face">
+                        <img src="../../pictures/room9.jpg" alt="" class="profile">
+                        <div class="pt-3 text-uppercase name">
+                            Single Room
+                        </div>
+                    </div>
+                    <div class="face back-face">
+                        <span class="fas fa-quote-left"></span>
+                        <div class="testimonial">
+                            A modern rom with a 120 cm wide bed of high sleeping quality. Cool working desk, wardrobe,
+                            large flat screen TV and free WiFi. Tiled bathroom with hairdryer and showers. Some of the
+                            rooms are located on lower ground floor with smaller windows..
+                        </div>
+                        <span class="fas fa-quote-right"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card">
+                    <div class="face front-face">
+                        <img src="../../pictures/room10.jpg" alt="" class="profile">
+                        <div class="pt-3 text-uppercase name">
+                            Double Room
+                        </div>
+                    </div>
+                    <div class="face back-face">
+                        <span class="fas fa-quote-left"></span>
+                        <div class="testimonial">
+                            A large room with 2x90cm beds of high quality put together as one double bed. Large cool
+                            working desk, small fridge, wardrobe and free WiFi. Tiled bathroom with showers and
+                            hairdryer.
+                        </div>
+                        <span class="fas fa-quote-right"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card">
+                    <div class="face front-face">
+                        <img src="../../pictures/room11.jpg" alt="" class="profile">
+                        <div class="pt-3 text-uppercase name">
+                            Superior Double Room
+                        </div>
+                    </div>
+                    <div class="face back-face">
+                        <span class="fas fa-quote-left"></span>
+                        <div class="testimonial special">
+                            Our lovely superior rooms situated on the top floor. They have a very spacious feeling
+                            measuring almost 3,5 meters to the ceiling. Here you get the feeling that you are among the
+                            clouds even though you are only on the 4th floor.
+
+                            Modern double room with 2x90cm beds put together as one double bed. The beds are of high
+                            quality and we promise you will get a good night’s sleep. Large working desk, small fridge
+                            in most Superior rooms, coffee/tea making facilities, wardrobe, free WiFi and iron + ironing
+                            board. Tiled bathroom with showers and hairdryer.
+                        </div>
+                        <span class="fas fa-quote-right"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card">
+                    <div class="face front-face">
+                        <img src="../../pictures/room12.jpg" alt="" class="profile">
+                        <div class="pt-3 text-uppercase name">
+                            Deluxe Room
+                        </div>
+                    </div>
+                    <div class="face back-face">
+                        <span class="fas fa-quote-left"></span>
+                        <div class="testimonial special">
+                            Large room with 2x90cm high quality beds, put together as one double bed. Seating area with
+                            a bedsofa and large flatscreen TV, wardrobe, small fridge, coffee/tea making facilitetes and
+                            free WiFi. The room is perfect for those who need larger room and space for smaller working
+                            meetings or for a family of up to 4 people. Large tiled bathroom with showers and hairdryer.
+                        </div>
+                        <span class="fas fa-quote-right"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="smoke">
+        <p> *all rooms and public areas are non-smoking</p>
+    </div>
+</body>
+<footer>
+    <p>Maude's Hotel<br>
+        +46 (8) 600 5900</p>
+</footer>
+
+</html>
+<script>
+    
+    function book() {
+        localStorage.setItem('main', 'bymaude')
+    }
+</script>

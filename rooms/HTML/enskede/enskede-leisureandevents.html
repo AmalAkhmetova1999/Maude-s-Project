@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../CSS/index_CSS.css">
+    <link rel="stylesheet" href="../../CSS/hotel_CSS.css">
+    <link rel="stylesheet" href="../../CSS/enskede-events_CSS.css">
+</head>
+<header>
+    <a href="../index.html"><img class="logo" src="../../pictures/enskedelogo.png"></a>
+    <a href="../booking.html" target="_blank"><button class="bookbutton" onclick="book()">BOOK ONLINE</button></a>
+    <ul>
+        <li> <a href="../enskede/enskede.html">Home</a></li>
+        <li> <a href="../enskede/enskede-business.html">Business</a></li>
+        <li><a href="../enskede/enskede-leisureandevents.html"> Leisure & Events</a> </li>
+        <li> <a href="../enskede/enskede-rooms.html">Rooms</a></li>
+        <li> <a href="../enskede/enskede-aboutus.html">About Us</a> </li>
+        <li> <a href="../enskede/enskede-contact.html">Contact</a> </li>
+    </ul>
+</header>
+<hr>
+
+<body>
+    <div class="h">
+        <h2>Are you planning to visit Stockholm?</h2>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <img class="eventpic" src="../../pictures/events.jpg">
+                <h3>Museums & entertainment park</h3>
+                <p class="eventtextleft">
+                    Don’t miss out visiting Djurgården with ABBA The museum, the Skansen open-air museum and the amazing
+                    Vasa museum featuring the world-famous warship Vasa. If you are traveling with children then you
+                    will love the Gröna Lund entertainment park and Astrid Lindgren’s Junibacken with its storybook
+                    world, restaurant and daily children theaters. The Thielska Gallery and Prince Eugen’s
+                    Waldermarsudde are two outstanding art museums, famous for their beautiful collections of
+                    Scandinavian paintings and sculptures.</p>
+            </div>
+            <div class="col-12 col-md-4">
+                <img class="eventpic" src="../../pictures/events3.jpg">
+                <h3>Sightseeing by boat</h3>
+                <p class="eventtextcenter">
+                    Stockholm city is spread across 14 islands and you can get to just about all of Stockholm’s many
+                    popular tourist attractions on foot, or why not take a boat sightseeing that will give you a
+                    different prospect of Scandinavia’s largest and probably most unique city.</p>
+
+            </div>
+            <div class="col-12 col-md-4">
+                <img class="eventpic" src="../../pictures/events2.jpg">
+                <h3>The Old town</h3>
+                <p class="eventtextright">
+                    The oldest part of Stockholm is Gamla Stan - the Old Town, here you can take a nice walk on small
+                    picturesque streets with gift and souvenir shops, cozy cafés and romantic restaurants, while
+                    visiting historical sites, such as The Royal Palace and the Stockholm Cathedral.
+
+                    We can help with tips on attractions and events, how to book tickets, maps and driving directions,
+                    recommend restaurants. Service, helpfulness and thoughtfulness are the guiding principles for those
+                    of us working at the hotel to give you that little extra.</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row col-md-12">
+            <div>
+                <div class="card">
+                    <h3 class="title">Ericsson Globe/Tele2 Arena</h3>
+                    <div class="bar">
+                        <div class="emptybar"></div>
+                        <div class="filledbar"></div>
+                    </div>
+                    <div class="circle">Metro/Underground/Subway from closet station, Svedmyra station to Globen
+                        station, journey about 10 minuter.
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="title">Stockholm International Fairs in Alvsjo</h3>
+                    <div class="bar">
+                        <div class="emptybar"></div>
+                        <div class="filledbar"></div>
+                    </div>
+                    <div class="circle">Car/Taxi 10 minutes or take the local buses 15-20 minutes
+                    </div>
+                </div>
+            </div>
+            <div class="row col-md-12">
+                <div>
+                    <div class="card">
+                        <h3 class="title">Stockholm city</h3>
+                        <div class="bar">
+                            <div class="emptybar"></div>
+                            <div class="filledbar"></div>
+                        </div>
+                        <div class="circle">Metro/Undeground/Subway station very close to the hotel, Only12-15 minutes
+                            to
+                            the central station.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3 class="title">Friends Arena/Mall of Scandinavia</h3>
+                        <div class="bar">
+                            <div class="emptybar"></div>
+                            <div class="filledbar"></div>
+                        </div>
+                        <div class="circle">Metro/Undergorund to the central station and change to commuter train to
+                            Akalla.
+                            Go off at Solna station. Or take the Metro to Globen station and change to the Tram for
+                            Solna
+                            station, a 40 minutes journey.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+    <p>Maude's Hotel<br>
+        +46 (8) 600 5900</p>
+</footer>
+
+</html>
+<script>
+    
+    function book() {
+        localStorage.setItem('main', 'enskede')
+    }
+</script>

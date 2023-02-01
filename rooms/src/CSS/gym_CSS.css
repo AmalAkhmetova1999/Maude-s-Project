@@ -1,0 +1,70 @@
+.gym {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    font-size: 20px;
+    z-index: 1;
+}
+
+.gymop {
+    display: none
+
+}
+
+.dumbbel {
+    max-width: 100%;
+    border-radius: 25px;
+    position: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    top: -60%;
+    z-index: 2;
+}
+
+.hard {
+    background-color: azure;
+    position: relative;
+    z-index: 2;
+    top: -115%;
+    left: 25%;
+    max-width: 50%;
+}
+
+@media only screen and (max-width:800px) {
+    .dumbbel {
+        top: -50%
+    }
+    .hard {
+        top: -100%;
+    }
+
+}
+@media only screen and (max-width:410px) {
+    .dumbbel {
+        top: -45%
+    }
+    .hard {
+        top: -93%;
+        max-width: 70%;
+        left: 15%;
+    }
+
+}
+@media only screen and (max-width:380px) {
+    .dumbbel {
+        top: -55%
+    }
+    .hard {
+        top: -100%;
+        max-width: 90%;
+        left: 5%;
+        font-size: 14px;
+    }
+
+}
